@@ -69,6 +69,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       },
       staticpath: config.build.assetsPublicPath + config.build.assetsSubDirectory,
       plugpath: config.build.assetsPublicPath + config.build.assetsPlugDirectory,
+      libspath: config.build.assetsPublicPath + config.build.assetsLibsDirectory,
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency'
     }),

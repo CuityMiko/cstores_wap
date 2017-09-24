@@ -1,3 +1,7 @@
+/**
+ * 全局过滤器
+ */
+
 function pluralize(time, label) {
   if (time === 1) {
     return time + label

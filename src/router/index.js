@@ -14,8 +14,7 @@ Vue.use(Router)
 **/
 export const constantRouterMap = [
   { path: '/404', component: _import('errorPage/404') },
-  { path: '/', component: _import('home/index'), name: 'Home' },
-  { path: '/test', component: _import('test/demo'), name: 'Test' }
+  { path: '/', component: _import('home/index'), name: 'Home' }
   // {
   //   path: '/',
   //   component: Layout,

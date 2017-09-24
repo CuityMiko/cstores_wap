@@ -40,6 +40,7 @@ module.exports = merge(baseWebpackConfig, {
       inject: true,
       staticpath: config.build.assetsPublicPath + config.build.assetsSubDirectory,
       plugpath: config.build.assetsPublicPath + config.build.assetsPlugDirectory,
+      libspath: config.build.assetsPublicPath + config.build.assetsLibsDirectory,
     }),
     new FriendlyErrorsPlugin()
   ]
