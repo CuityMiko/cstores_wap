@@ -36,6 +36,14 @@ import FastClick from 'fastclick'
 
 FastClick.attach(document.body)
 
+// vux全局弹窗
+import { AlertPlugin, ConfirmPlugin, LoadingPlugin, ToastPlugin } from 'vux'
+Vue.use(AlertPlugin)
+Vue.use(ConfirmPlugin)
+Vue.use(LoadingPlugin)
+Vue.use(ToastPlugin)
+// Vue.use(vuxToastPlugin)
+
 // 注册全局路由
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
