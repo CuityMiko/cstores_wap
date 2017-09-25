@@ -1,6 +1,5 @@
 <template>
   <div>
-    <x-header :left-options="{backText: ''}" :title="$t('CStroes')"><a slot="right"><icon-svg icon-class="add" class="main-icons"></icon-svg></a></x-header>
     <group title="">
       <cell :title="ctitle" :value="cvalue" is-link></cell>
     </group>
@@ -39,11 +38,10 @@
 </i18n>
 
 <script>
-import { Group, Cell, XHeader, XButton, Box, XInput, Tabbar, TabbarItem } from 'vux'
+import { Group, Cell, XButton, Box, XInput, Tabbar, TabbarItem } from 'vux'
 
 export default {
   components: {
-    XHeader,
     Group,
     Cell,
     XButton,

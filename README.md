@@ -73,7 +73,13 @@
 - 页面中直接组件化使用即可：“ <icon-svg icon-class="upper7"></icon-svg> ”
 - svg文件统一存放路径：CStoresWMS\src\icons\svg
 - 如果svg文件不足以支持开发中使用，则参照 (http://www.iconsvg.com) 下载
-- CStoreFE的svg图标统一会在 (http://www.iconfont.cn) 的CStore项目中管理 
+- CStoreFE的svg图标统一会在 (http://www.iconfont.cn) 的CStore项目中管理
+
+## 关于Eslint ##
+
+- eslint主要是为了团队开发制定的代码规范
+- 0:关闭规则 1:警告 2:报错
+- 官网: (http://eslint.cn/docs/rules/)
 
 ## License ##
 
