@@ -12,7 +12,7 @@ module.exports = {
       name: 'i18n',
       vuxStaticReplace: false,
       staticReplace: false,
-      extractToFiles: 'src/locales/components.yml',
+      extractToFiles: 'src/locales/globals.yml',
       localeList: ['en', 'zh-CN']
     },
     {

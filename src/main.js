@@ -56,7 +56,7 @@ Vue.use(vuexI18n.plugin, store)
 const vuxLocales = require('json-loader!yaml-loader!vux/src/locales/all.yml')
 
 // 组件的全局国际化配置
-const componentsLocales = require('json-loader!yaml-loader!@/locales/components.yml')
+const componentsLocales = require('json-loader!yaml-loader!@/locales/globals.yml')
 
 // 合并全局的国际化配置
 const finalLocales = {
@@ -74,7 +74,6 @@ import { DatetimePlugin, ConfigPlugin, BusPlugin, LocalePlugin, DevicePlugin, To
 Vue.use(LocalePlugin)
 
 // 判断并设置当前语言版本
-console.log(Vue.locale)
 // const nowLocale = Vue.locale.get();
 const nowLocale = window.navigator.language;
 if (/zh/.test(nowLocale)) {
