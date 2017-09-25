@@ -10,7 +10,7 @@
     <box gap="10px 10px">
       <x-button type="primary" @click.native="confirm" :text="$t('确定')"></x-button>
     </box>
-    <!-- <tabbar>
+    <tabbar>
       <tabbar-item>
         <img slot="icon" src="../../assets/images/icons/house.png">
         <span slot="label">首页</span>
@@ -26,21 +26,6 @@
       <tabbar-item badge="2">
         <img slot="icon" src="../../assets/images/icons/account.png">
         <span slot="label">我的</span>
-      </tabbar-item>
-    </tabbar> -->
-
-    <tabbar class="vux-demo-tabbar" icon-class="vux-center" slot="bottom">
-      <tabbar-item>
-        <span class="demo-icon-22 vux-demo-tabbar-icon-home" slot="icon" style="position:relative;top: -2px;">&#xe637;</span>
-        <span slot="label">Home</span>
-      </tabbar-item>
-      <tabbar-item badge="9">
-        <span class="demo-icon-22" slot="icon">&#xe633;</span>
-        <span slot="label"><span class="vux-demo-tabbar-component">cart</span></span>
-      </tabbar-item>
-      <tabbar-item show-dot>
-        <span class="demo-icon-22" slot="icon">&#xe630;</span>
-        <span slot="label">Donate</span>
       </tabbar-item>
     </tabbar>
   </div>
@@ -100,28 +85,5 @@ export default {
 </script>
 
 <style scoped>
-  .weui-tabbar.vux-demo-tabbar {
-    /** backdrop-filter: blur(10px);
-    background-color: none;
-    background: rgba(247, 247, 250, 0.5);**/
-  }
-  .vux-demo-tabbar .weui-bar__item_on .demo-icon-22 {
-    color: #F70968;
-  }
-  .vux-demo-tabbar .weui-tabbar_item.weui-bar__item_on .vux-demo-tabbar-icon-home {
-    color: rgb(53, 73, 94);
-  }
-  .demo-icon-22:before {
-    content: attr(icon);
-  }
-  .vux-demo-tabbar-component {
-    background-color: #F70968;
-    color: #fff;
-    border-radius: 7px;
-    padding: 0 4px;
-    line-height: 14px;
-  }
-  .weui-tabbar__icon + .weui-tabbar__label {
-    margin-top: 0!important;
-  }
+
 </style>
