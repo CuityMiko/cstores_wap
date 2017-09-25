@@ -11,19 +11,19 @@
     </box>
     <tabbar>
       <tabbar-item>
-        <img slot="icon" src="../../assets/images/icons/house.png">
+        <img slot="icon" src="../../assets/images/icons/house-selected.png">
         <span slot="label">首页</span>
       </tabbar-item>
       <tabbar-item show-dot>
-        <img slot="icon" src="../../assets/images/icons/category.png">
+        <img slot="icon" src="../../assets/images/icons/category-selected.png">
         <span slot="label">分类</span>
       </tabbar-item>
       <tabbar-item>
-        <img slot="icon" src="../../assets/images/icons/cart.png">
+        <img slot="icon" src="../../assets/images/icons/cart-selected.png">
         <span slot="label">购物车</span>
       </tabbar-item>
       <tabbar-item badge="2">
-        <img slot="icon" src="../../assets/images/icons/account.png">
+        <img slot="icon" src="../../assets/images/icons/account-selected.png">
         <span slot="label">我的</span>
       </tabbar-item>
     </tabbar>

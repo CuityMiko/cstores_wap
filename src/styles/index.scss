@@ -6,3 +6,22 @@
     top: -5px;
     left: -16px;
 }
+
+// footer
+.weui-tabbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  z-index: 500;
+  bottom: 0;
+  width: 100%;
+  background-color: #F7F7FA;
+  height: 5rem;
+  padding: .5rem;
+}
+
+.weui-tabbar__item{
+  text-decoration: none;
+}

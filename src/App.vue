@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-    <x-header :left-options="{backText: ''}" :title="$t('CStroes')"><a slot="right"><icon-svg icon-class="add" class="main-icons"></icon-svg></a></x-header>
+    <x-header :left-options="{backText: '', showBack: false}" :title="$t('CStroes')"><a slot="right"><icon-svg icon-class="add" class="main-icons"></icon-svg></a></x-header>
 		<router-view></router-view>
 	</div>
 </template>
