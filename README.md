@@ -8,7 +8,7 @@
 
 ```bash
     # 克隆项目
-    git clone https://github.com/PanJiaChen/vue-element-admin.git
+    git clone https://github.com/CuityMiko/cstores_wap.git
 
     # 安装依赖
     npm install
@@ -63,7 +63,7 @@
 
 ## 状态管理 ##
 
-后台只有user和app配置相关状态使用vuex存在全局，其它数据都由每个业务页面自己管理。
+目前只有user和app配置相关状态使用vuex存在全局，其它数据都由每个业务页面自己管理。
 
 ## 关于图标 ##
 
