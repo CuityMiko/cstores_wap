@@ -70,7 +70,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       staticpath: config.build.assetsPublicPath + config.build.assetsSubDirectory,
       plugpath: config.build.assetsPublicPath + config.build.assetsPlugDirectory,
       libspath: config.build.assetsPublicPath + config.build.assetsLibsDirectory,
-      // necessary to consistently work with multiple chunks via CommonsChunkPlugin
+      // necessary to consistently work with multiple chunks via
       chunksSortMode: 'dependency'
     }),
     // cache Module Identifiers
@@ -90,13 +90,13 @@ var webpackConfig = merge(baseWebpackConfig, {
       }
     }),
     // split echarts into its own file
-    new webpack.optimize.CommonsChunkPlugin({
-      async: 'echarts',
-      minChunks(module) {
-        var context = module.context;
-        return context && (context.indexOf('echarts') >= 0 || context.indexOf('zrender') >= 0);
-      }
-    }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   async: 'echarts',
+    //   minChunks(module) {
+    //     var context = module.context;
+    //     return context && (context.indexOf('echarts') >= 0 || context.indexOf('zrender') >= 0);
+    //   }
+    // }),
     // extract webpack runtime and module manifest to its own file in order to
     // prevent vendor hash from being updated whenever app bundle is updated
     new webpack.optimize.CommonsChunkPlugin({
