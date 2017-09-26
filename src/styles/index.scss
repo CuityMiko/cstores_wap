@@ -1,27 +1,33 @@
 // icons styles
 .main-icons{
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: -5px;
-    left: -16px;
-}
-
-// footer
-.weui-tabbar {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  z-index: 500;
-  bottom: 0;
-  width: 100%;
-  background-color: #F7F7FA;
-  height: 5rem;
-  padding: .5rem;
+  // position: absolute;
+  width: 30px;
+  height: 30px;
+  // top: -5px;
+  // left: -16px;
 }
 
 .weui-tabbar__item{
   text-decoration: none;
+}
+
+// footer
+#app .weui-tabbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  z-index: 500;
+  bottom: 0;
+  width: 100%;
+  background-color: #F7F7FA;
+  // height: 5rem;
+  padding: .1rem;
+}
+
+*{
+  padding:0;
+  margin:0;
+  list-style: none;
 }

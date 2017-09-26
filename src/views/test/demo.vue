@@ -14,7 +14,7 @@
         <h3>{{ title }}</h3>
         <h3>{{ ndate | convertDate }}</h3>
         <h3>{{ num | toceil}}</h3>
-        <icon-svg icon-class="upper7"></icon-svg>
+        <icon-svg icon-class="upper"></icon-svg>
         <group title="cell demo">
             <cell :title="vuxmsg" :value="vuxval"></cell>
         </group>

@@ -38,7 +38,7 @@ module.exports = {
         'comma-spacing': [0, { 'before': false, 'after': true }], // 控制逗号前后的空格
         'comma-style': [0, 'last'], // 控制逗号在行尾出现还是在行首出现 (默认行尾)
         'constructor-super': 2, // 强制在子类构造函数中用super()调用父类构造函数
-        'curly': [2, 'multi-line'], // 强制所有控制语句使用一致的括号风格
+        'curly': [0, 'multi-line'], // 强制所有控制语句使用一致的括号风格
         'dot-location': [2, 'property'], // 强制object.key 中 . 的位置，参数: property，'.'号应与属性在同一行
         'eol-last': 1, // 文件末尾强制换行
         'eqeqeq': [2, 'allow-null'], // 使用 === 替代 == allow-null允许null和undefined==
@@ -137,7 +137,7 @@ module.exports = {
         'wrap-iife': [2, 'any'], // 要求 IIFE 使用括号括起来
         'yield-star-spacing': [2, 'both'], // 强制在 yield* 表达式中 * 周围使用空格
         'yoda': [1, 'never'], // 要求或禁止 “Yoda” 条件
-        'prefer-const': 2, // 要求使用 const 声明那些声明后不再被修改的变量
+        'prefer-const': 0, // 要求使用 const 声明那些声明后不再被修改的变量
         'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0, // 禁用 debugger
         'object-curly-spacing': [1, 'always', { objectsInObjects: false }], // 强制在大括号中使用一致的空格
         'array-bracket-spacing': [1, 'never'] // 强制数组方括号中使用一致的空格

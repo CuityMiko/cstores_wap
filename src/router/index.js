@@ -1,36 +1,34 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 const _import = require('./_import_' + process.env.NODE_ENV) // 路由延迟加载
-// in development env not use Lazy Loading,because Lazy Loading too many pages will cause webpack hot update too slow.so only in production use Lazy Loading
 
 Vue.use(Router)
 
 /**
-* icon : the icon show in the sidebar
-* hidden : if `hidden:true` will not show in the sidebar
-* redirect : if `redirect:noredirect` will no redirct in the levelbar
-* noDropdown : if `noDropdown:true` will has no submenu
-* meta : { role: ['admin'] }  will control the page role
+* path : url链接
+* component : 指定组件
+* name : 路由名称（唯一标识）
+* header : 是否显示标题栏
+* footer : 是否显示底部栏
+* footer : 是否显示底部栏
+* title : 标题
+* back : 是否返回
+* right : 是否有右侧标签
+* icon : 右侧标签icon名称
 **/
 export const constantRouterMap = [
-  { path: '/404', component: _import('errorPage/404') },
-  { path: '/', component: _import('home/index'), name: 'Home' }
-  // {
-  //   path: '/',
-  //   component: Layout,
-  //   redirect: '/dashboard',
-  //   name: '首页',
-  //   hidden: true,
-  //   children: [{ path: 'dashboard', component: _import('dashboard/index') }]
-  // },
-  // {
-  //   path: '/test',
-  //   component: Layout,
-  //   redirect: 'noredirect',
-  //   name: 'Test',
-  //   icon: 'notebook43',
-  //   children: [{ path: 'demo', icon: 'whiteboard8', component: _import('test/demo'), name: 'Demo' }]
-  // }
+  { path: '/home', component: _import('home/index'), name: 'home', header: true, footer: true, title: 'CStroes', back: false, right: false },
+  { path: '/category', component: _import('category/index'), name: 'category', header: true, footer: true, title: '商品分类', back: true, right: true, icon: 'search' },
+  { path: '/cart', component: _import('cart/index'), name: 'cart', header: true, footer: true, title: '我的购物车', back: true, right: true, icon: 'more' },
+  { path: '/account', component: _import('account/index'), name: 'account', header: false, footer: true },
+  { path: '/goods', component: _import('goods/index'), name: 'goods', header: true, footer: true, title: '商品列表', back: true, right: true, icon: 'grid' },
+  { path: '/goods/detail/:id', component: _import('goods/detail'), name: 'goodsdetail', header: true, footer: false, title: '商品详情', back: true, right: true, icon: 'heart',
+    beforeEnter(to, from, next) {
+      next();
+    }
+  },
+  { path: '/', redirect: '/home' }, // 如果路由为/的时候跳转到/home路由
+  { path: '*', component: _import('errorPage/404'), name: '404', header: true, title: 'CStores', back: true }
 ]
 
 export default new Router({

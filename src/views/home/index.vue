@@ -1,32 +1,25 @@
 <template>
-  <div>
-    <group title="">
-      <cell :title="ctitle" :value="cvalue" is-link></cell>
-    </group>
-    <group>
-      <x-input :title="$t('内容')" v-model="content"></x-input>
-    </group>
-    <box gap="10px 10px">
-      <x-button type="primary" @click.native="confirm" :text="$t('确定')"></x-button>
-    </box>
-    <tabbar>
-      <tabbar-item>
-        <img slot="icon" src="../../assets/images/icons/house-selected.png">
-        <span slot="label">首页</span>
-      </tabbar-item>
-      <tabbar-item show-dot>
-        <img slot="icon" src="../../assets/images/icons/category-selected.png">
-        <span slot="label">分类</span>
-      </tabbar-item>
-      <tabbar-item>
-        <img slot="icon" src="../../assets/images/icons/cart-selected.png">
-        <span slot="label">购物车</span>
-      </tabbar-item>
-      <tabbar-item badge="2">
-        <img slot="icon" src="../../assets/images/icons/account-selected.png">
-        <span slot="label">我的</span>
-      </tabbar-item>
-    </tabbar>
+  <div id="index">
+    <div class="search">
+      <diV class="s_box">
+        <div class="s_left">
+          <img src="../../assets/images/logo_c.png">
+        </div>
+        <div class="s_mid">
+            <icon-svg icon-class="search" class="main-icons"></icon-svg>
+            <input type="text" placeholder="搜索商品">
+        </div>
+        <div class="s_right">
+          <a href="" class="message">
+            <icon-svg icon-class="message" class="main-icons"></icon-svg>
+          </a>
+        </div>
+      </diV>
+       
+    </div>
+    <Banner></Banner>
+    <RotRecommend></RotRecommend>
+    <Goods></Goods> 
   </div>
 </template>
 
@@ -38,50 +31,79 @@
 </i18n>
 
 <script>
-import { Group, Cell, XButton, Box, XInput, Tabbar, TabbarItem } from 'vux'
-
+import Banner from './components/banner.vue'
+import RotRecommend from './components/RotRecommend.vue'
+import Goods from './components/goods.vue'
+import { Search } from 'vux'
 export default {
   components: {
-    Group,
-    Cell,
-    XButton,
-    Box,
-    XInput,
-    Tabbar,
-    TabbarItem
+    Search,
+    Banner,
+    RotRecommend,
+    Goods,
   },
   data() {
     return {
-      ctitle: 'cell title',
-      cvalue: 'cell value',
       content: ''
-    }
-  },
-  methods: {
-    confirm() {
-      const _self = this;
-      if (this.content) {
-        this.$vux.alert.show({
-          title: _self.$t('温馨提示'),
-          content: _self.content,
-          onShow() {
-            console.log('Plugin: I\'m showing')
-          },
-          onHide() {
-            console.log('Plugin: I\'m hiding')
-          }
-        })
-      } else {
-        this.$vux.toast.show({
-          type: 'text',
-          text: _self.$t('请输入内容')
-        })
-      }
     }
   }
 }
 </script>
 
 <style scoped>
-
+#index .search{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 7px 10px;
+  background:#4a4d4f;
+  position: fixed;
+  top:0;
+  z-index: 300;
+}
+#index .search .s_box{
+  display: flex;
+}
+#index .search .s_left{
+  width: 33px;
+  height: 33px;
+}
+#index .search .s_left>img{
+  width: 100%;
+  height: 100%;
+}
+#index .search .s_mid{
+  display: flex;
+  flex: 2;
+  border-radius: 5px;
+  margin: 0 10px;
+  position: relative;
+}
+#index .search .s_mid .main-icons{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 5px;
+  top:7px;
+}
+#index .search .s_mid input{
+  border:0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  outline: none;
+}
+input::-webkit-input-placeholder{ 
+  color: #656565; 
+  font-size:14px;
+  padding-left:30px;
+  line-height: 33px;
+} 
+#index .s_mid .weui-search-bar{
+  padding:0;
+}
+#index .search .s_right>a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 </style>
