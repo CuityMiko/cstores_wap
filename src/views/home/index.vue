@@ -1,25 +1,25 @@
 <template>
   <div id="index">
-    <div class="search">
-      <diV class="s_box">
-        <div class="s_left">
-          <img src="../../assets/images/logo_c.png">
-        </div>
-        <div class="s_mid">
-            <icon-svg icon-class="search" class="main-icons"></icon-svg>
-            <input type="text" placeholder="搜索商品">
-        </div>
-        <div class="s_right">
-          <a href="" class="message">
-            <icon-svg icon-class="message" class="main-icons"></icon-svg>
-          </a>
-        </div>
-      </diV>
-       
-    </div>
+    <HistorySearch v-if="flag"></HistorySearch>
+    <Search v-if="flag"></Search>
+    <IndexSearch></IndexSearch>
     <Banner></Banner>
     <RotRecommend></RotRecommend>
-    <Goods></Goods> 
+    <Word></Word>
+    <Goods1></Goods1>
+    <Advert></Advert>
+    <PartLine></PartLine>
+    <Word></Word>
+    <Goods2></Goods2>
+    <Advert></Advert>
+    <Word></Word>
+    <Goods3></Goods3>
+    <Word></Word>
+    <Goods4></Goods4>
+    <trim></trim>
+    <Word></Word>
+    <Goods5></Goods5>
+    <div style="height:60px"></div>
   </div>
 </template>
 
@@ -31,79 +31,46 @@
 </i18n>
 
 <script>
+import IndexSearch from './components/index_search.vue'
 import Banner from './components/banner.vue'
 import RotRecommend from './components/RotRecommend.vue'
-import Goods from './components/goods.vue'
-import { Search } from 'vux'
+import Word from './components/word'
+import Goods1 from './components/goods1.vue'
+import Goods2 from './components/goods2.vue'
+import Goods3 from './components/goods3.vue'
+import Goods4 from './components/goods4.vue'
+import Goods5 from './components/goods5.vue'
+import Advert from './components/advert'
+import PartLine from './components/partLine'
+import Trim from './components/trim'
+import HistorySearch from './components/history_search.vue'
+import Search from './components/search.vue'
 export default {
   components: {
-    Search,
+    IndexSearch,
     Banner,
     RotRecommend,
-    Goods,
+    Word,
+    Goods1,
+    Goods2,
+    Goods3,
+    Goods4,
+    Goods5,
+    Advert,
+    PartLine,
+    Trim,
+    Search,
+    HistorySearch
   },
   data() {
     return {
-      content: ''
+      title: '首页',
+      flag: false
     }
   }
 }
 </script>
 
 <style scoped>
-#index .search{
-  width: 100%;
-  box-sizing: border-box;
-  padding: 7px 10px;
-  background:#4a4d4f;
-  position: fixed;
-  top:0;
-  z-index: 300;
-}
-#index .search .s_box{
-  display: flex;
-}
-#index .search .s_left{
-  width: 33px;
-  height: 33px;
-}
-#index .search .s_left>img{
-  width: 100%;
-  height: 100%;
-}
-#index .search .s_mid{
-  display: flex;
-  flex: 2;
-  border-radius: 5px;
-  margin: 0 10px;
-  position: relative;
-}
-#index .search .s_mid .main-icons{
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  left: 5px;
-  top:7px;
-}
-#index .search .s_mid input{
-  border:0;
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  outline: none;
-}
-input::-webkit-input-placeholder{ 
-  color: #656565; 
-  font-size:14px;
-  padding-left:30px;
-  line-height: 33px;
-} 
-#index .s_mid .weui-search-bar{
-  padding:0;
-}
-#index .search .s_right>a{
-  display: block;
-  width: 100%;
-  height: 100%;
-}
+@import './index.scss';
 </style>

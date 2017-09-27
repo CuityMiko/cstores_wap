@@ -7,7 +7,7 @@ module.exports = {
         prodEnv: require('./prod.env'),
         index: path.resolve(__dirname, '../dist/index.html'),
         assetsRoot: path.resolve(__dirname, '../dist'),
-        assetsPublicPath: './',          //请根据自己路径配置更改
+        assetsPublicPath: './', //请根据自己路径配置更改
         assetsSubDirectory: 'static',
         assetsPlugDirectory: 'static/bower_components',
         assetsLibsDirectory: 'static/libs',

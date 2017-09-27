@@ -12,7 +12,13 @@ en:
   商品列表: Goods List
   商品详情: Goods Detail
   跳转商品列表: Jump to list
-  搜索商品: 搜索商品
+  搜索商品: Search goods
+  Grid: Grid
+  Go to Cell: Go to Cell
+  Haier: Haier
+  xihu: xihu
+  历史搜索: History Search
+  清除历史搜索记录: Clear history search record
 zh-CN:
   温馨提示: 温馨提示
   确定: 确定
@@ -28,3 +34,9 @@ zh-CN:
   商品详情: 商品详情
   跳转商品列表: 跳转商品列表
   搜索商品: 搜索商品
+  Grid: Haier/海尔多门大容量冷藏冷冻风冷无霜电
+  Go to Cell: 跳转到Cell
+  Haier: Haier/多门大容量
+  xihu: 纯天然洗护用品
+  历史搜索: 历史搜索
+  清除历史搜索记录: 清除历史搜索记录

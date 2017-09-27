@@ -21,12 +21,14 @@ export const constantRouterMap = [
   { path: '/category', component: _import('category/index'), name: 'category', header: true, footer: true, title: '商品分类', back: true, right: true, icon: 'search' },
   { path: '/cart', component: _import('cart/index'), name: 'cart', header: true, footer: true, title: '我的购物车', back: true, right: true, icon: 'more' },
   { path: '/account', component: _import('account/index'), name: 'account', header: false, footer: true },
+  { path: '/login', component: _import('login/index'), name: 'login', header: false, footer: false },
   { path: '/goods', component: _import('goods/index'), name: 'goods', header: true, footer: true, title: '商品列表', back: true, right: true, icon: 'grid' },
   { path: '/goods/detail/:id', component: _import('goods/detail'), name: 'goodsdetail', header: true, footer: false, title: '商品详情', back: true, right: true, icon: 'heart',
     beforeEnter(to, from, next) {
       next();
-    }
+    },
   },
+
   { path: '/', redirect: '/home' }, // 如果路由为/的时候跳转到/home路由
   { path: '*', component: _import('errorPage/404'), name: '404', header: true, title: 'CStores', back: true }
 ]

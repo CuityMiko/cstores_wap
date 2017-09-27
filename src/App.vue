@@ -5,7 +5,7 @@
     <tabbar v-if="footer.show">
       <tabbar-item v-for="(item,index) in tabbars" :key="index" :selected="item.selected" :link='item.link'>
         <icon-svg slot="icon" :iconClass="item.imgsrc" class="main-icons"></icon-svg>
-        <span slot="label">{{ item.title }}</span>
+        <span slot="label" class="t_size">{{ item.title }}</span>
       </tabbar-item>
     </tabbar>
 	</div>
