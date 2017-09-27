@@ -119,7 +119,29 @@ import lodash from 'lodash'
 Object.defineProperty(Vue.prototype,'$lodash',{ value: lodash })
 
 // 关闭生产模式下给出的提示
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+
+// 页面切换加载动画
+store.registerModule('vux', {
+  state: {
+    isLoading: false
+  },
+  mutations: {
+    updateLoadingStatus(state, payload) {
+      state.isLoading = payload.isLoading
+    }
+  }
+})
+
+// 路由全局钩子
+router.beforeEach(function(to, from, next) {
+  store.commit('updateLoadingStatus', { isLoading: true })
+  next()
+})
+
+router.afterEach(function(to) {
+  store.commit('updateLoadingStatus', { isLoading: false })
+})
 
 new Vue({
   el: '#app',

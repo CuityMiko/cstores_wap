@@ -1,14 +1,14 @@
 <template>
     <div id="search" style="height:630px;">
         <div class="search_history">
-            <h4>{{$t('历史搜索')}}</h4>
+            <h4 :text="$t('历史搜索')"></h4>
             <ul class="history">
                 <li>
                     <a href="">ssssss</a>
                 </li>
             </ul>
             <div class="clear_history">
-                <button>{{$t('清除历史搜索记录')}}</button>
+                <button :value="$t('清除历史搜索记录')"></button>
             </div>
         </div>
     </div>
@@ -19,7 +19,7 @@
   en: History Search
 清除历史搜索记录:
   en: Clear history search record
-购物车: 
+购物车:
   en: Cart
 我的:
   en: My

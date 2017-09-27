@@ -16,7 +16,7 @@
   en: Home
 分类:
   en: Category
-购物车: 
+购物车:
   en: Cart
 我的:
   en: My

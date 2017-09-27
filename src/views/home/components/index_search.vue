@@ -2,8 +2,8 @@
     <div class="index_search">
         <diV class="s_box">
             <div class="s_left">
-                <!-- <img src="../../../assets/images/logo_c.png"> -->
-                <img src="http://120.27.249.57:8000/upload/20170405/1491360240847.jpg" alt="">
+                <img src="../../../assets/images/logo_c.png">
+                <!-- <img src="http://120.27.249.57:8000/upload/20170405/1491360240847.jpg" alt=""> -->
             </div>
             <div class="s_mid">
                 <icon-svg icon-class="search" class="main-icons"></icon-svg>
@@ -17,11 +17,6 @@
         </diV>
     </div>
 </template>
-
-<i18n>
-搜索商品：
-  en: Search goods 
-</i18n>
 
 <script>
 export default {
@@ -76,11 +71,11 @@ export default {
   outline: none;
   text-indent:30px;
 }
-input::-webkit-input-placeholder{ 
-  color: rgba(200, 200, 200, 1); 
+input::-webkit-input-placeholder{
+  color: rgba(200, 200, 200, 1);
   font-size:14px;
   line-height: 33px;
-} 
+}
 #index .s_mid .weui-search-bar{
   padding:0;
 }

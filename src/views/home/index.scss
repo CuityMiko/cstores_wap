@@ -1,3 +1,6 @@
+#index {
+  overflow-x: hidden;
+}
 .weui-tabbar{
     position: fixed;
 }
@@ -27,7 +30,7 @@
     padding: 10px;
     border-bottom: 1px dotted #ddd;
     display: flex;
-    text-decoration: none; 
+    text-decoration: none;
 }
 #index .goods>li:last-child>a{
     border:0;

@@ -94,6 +94,16 @@ let webpackConfig = {
 
 // vux loader
 const vuxLoader = require('vux-loader')
-const vuxConfig = require('./vux-config')
-module.exports = vuxLoader.merge(webpackConfig, vuxConfig)
+// const vuxConfig = require('./vux-config')
+// module.exports = vuxLoader.merge(webpackConfig, vuxConfig)
+
+module.exports = vuxLoader.merge(webpackConfig, {
+  options: {
+    vuxDev: false, // true
+    vuxSetBabel: true, // false
+    vuxWriteFile: false,
+    showVuxVersionInfo: false // 打印版本信息 【vux@2.6.3, vux-loader@1.1.9, webpack@2.6.1, node@6.10】
+  },
+  plugins: ['vux-ui', 'progress-bar', 'duplicate-style', { name: 'i18n', vuxStaticReplace: false, staticReplace: false, extractToFiles: 'src/locales/globals.yml', localeList: ['en', 'zh-CN'] }, { name: 'less-theme', path: 'src/styles/theme.less' }]
+})
 

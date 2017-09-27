@@ -10,7 +10,7 @@
             </div>
             <div class="s_right">
                 <a href="">
-                    <span>{{$t('搜索')}}</span>
+                    <span :text="$t('搜索')"></span>
                 </a>
             </div>
         </diV>
@@ -18,7 +18,7 @@
 </template>
 
 <i18n>
-搜索：
+搜索:
   en: Search
 </i18n>
 
@@ -52,7 +52,7 @@ export default {
   height: 33px;
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
 }
 .search .s_left>img{
   width: 100%;
@@ -82,11 +82,11 @@ export default {
   text-indent:30px;
   caret-color:#fff;
 }
-input::-webkit-input-placeholder{ 
-  color: #666; 
+input::-webkit-input-placeholder{
+  color: #666;
   font-size:14px;
   line-height: 33px;
-} 
+}
 .s_mid .weui-search-bar{
   padding:0;
 }
