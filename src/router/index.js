@@ -17,9 +17,9 @@ Vue.use(Router)
 * icon : 右侧标签icon名称
 **/
 export const constantRouterMap = [
-  { path: '/home', component: _import('home/index'), name: 'home', header: true, footer: true, title: 'CStroes', back: false, right: false },
+  { path: '/home', component: _import('home/index'), name: 'home', header: false, footer: true, title: 'CStroes', back: false, right: false },
+  { path: '/cart', component: _import('cart/index'), name: 'cart', header: false, footer: true, title: '我的购物车', back: true, right: true, icon: 'more' },
   { path: '/category', component: _import('category/index'), name: 'category', header: false, footer: true, title: '商品分类', back: true, right: true, icon: 'search' },
-  { path: '/cart', component: _import('cart/index'), name: 'cart', header: true, footer: true, title: '我的购物车', back: true, right: true, icon: 'more' },
   { path: '/account', component: _import('account/index'), name: 'account', header: false, footer: true },
   { path: '/goods', component: _import('goods/index'), name: 'goods', header: true, footer: true, title: '商品列表', back: true, right: true, icon: 'grid' },
   { path: '/goods/detail/:id', component: _import('goods/detail'), name: 'goodsdetail', header: true, footer: false, title: '商品详情', back: true, right: true, icon: 'heart',
@@ -34,7 +34,7 @@ export const constantRouterMap = [
 ]
 
 export default new Router({
-  // mode: 'history', // 后端支持可开
+  mode: 'history', // 后端支持可开
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRouterMap
 })

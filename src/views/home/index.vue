@@ -1,5 +1,6 @@
 <template>
   <div id="index">
+    <HTrim></HTrim>
     <HistorySearch v-if="flag"></HistorySearch>
     <Search v-if="flag"></Search>
     <IndexSearch></IndexSearch>
@@ -19,7 +20,7 @@
     <trim></trim>
     <Word></Word>
     <Goods5></Goods5>
-    <div style="height:60px"></div>
+    <FTrim></FTrim>
   </div>
 </template>
 
@@ -45,6 +46,8 @@ import PartLine from './components/partLine'
 import Trim from './components/trim'
 import HistorySearch from './components/history_search.vue'
 import Search from './components/search.vue'
+import HTrim from '../trim/HTrim.vue'
+import FTrim from '../trim/FTrim.vue'
 export default {
   components: {
     IndexSearch,
@@ -60,7 +63,9 @@ export default {
     PartLine,
     Trim,
     Search,
-    HistorySearch
+    HistorySearch,
+    HTrim,
+    FTrim
   },
   data() {
     return {

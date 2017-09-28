@@ -1,10 +1,10 @@
 {
   "name": "cstroesmobile",
   "version": "0.1.0",
-  "description": "A Vue.js Admin System Bower for CStroes WMS",
+  "description": "A Vue.js System Bower for CStroes mobile h5",
   "homepage": "https://github.com/CuityMiko",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.2.1"
+    "animate.css": "^3.5.2"
   }
 }

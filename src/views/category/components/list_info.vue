@@ -3,19 +3,13 @@
         <div class="box2">
             <div v-for="i in list" :key="i.id">
                 <p>{{i.title}}</p>
-                <img src="http://www.commoditiesinchina.com:80/upload/20170629/1498722708289.jpg" alt="">
-                <span>Water dispense</span>
+                <img :src="i.src" alt="">
+                <span>{{i.content}}</span>
             </div>
 
         </div>
     </div>
 </template>
-
-<i18n>
-跳转商品列表:
-  en: Jump to list
-</i18n>
-
 <script>
 import { ViewBox } from 'vux'
 

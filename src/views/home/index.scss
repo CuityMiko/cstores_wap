@@ -29,7 +29,7 @@
     overflow: hidden;
     padding: 10px;
     border-bottom: 1px dotted #ddd;
-    display: flex;
+    display: block;
     text-decoration: none;
 }
 #index .goods>li:last-child>a{
@@ -45,8 +45,14 @@
     color: #f00;
     font-size: 14px;
 }
-#index .goods>li img{
+#index .goods>li .goods_img{
+    float: left;
+    width: 106px;
     height:106px;
+}
+#index .goods>li img{
+    width: 100%;
+    height: 100%;
 }
 #index .goods-info{
     padding:0 10px

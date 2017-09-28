@@ -56,7 +56,7 @@ export default {
   },
   data() {
     return {
-      title: '上二下四',
+      title: '上二下四'
     }
   },
 }

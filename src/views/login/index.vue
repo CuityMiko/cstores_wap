@@ -1,15 +1,15 @@
 <template>
   <div>
     <div class="bgc"></div>
-     <div>
+     <!-- <div>
         <tab>
             <tab-item selected @on-item-click="onItemClick">注册</tab-item>
             <tab-item @on-item-click="onItemClick">登录</tab-item>
         </tab>
-     </div>
+     </div> -->
      <div>
         <group title="">
-            <x-input title="姓名:" name="username" placeholder="请输入姓名" is-type="china-name" class="t_size" style=" color:#ccc"></x-input>
+            <x-input title="账号:" name="username" placeholder="用户名/手机号/邮箱" is-type="china-name" class="t_size" style=" color:#ccc"></x-input>
              <x-input title="密码:" name="username" placeholder="请输入密码" is-type="china-name" class="t_size" style=" color:#ccc"></x-input>
          </group>
      </div>

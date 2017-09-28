@@ -24,7 +24,7 @@ let webpackConfig = {
       'src': path.resolve(__dirname, '../src'),
       'assets': path.resolve(__dirname, '../src/assets'),
       'images': path.resolve(__dirname, '../src/assets/images'),
-      'plug': path.resolve(__dirname, '../src/static/bower_components'),
+      'plug': path.resolve(__dirname, '../static/bower_components'),
       'components': path.resolve(__dirname, '../src/components'),
       'views': path.resolve(__dirname, '../src/views'),
       'styles': path.resolve(__dirname, '../src/styles'),

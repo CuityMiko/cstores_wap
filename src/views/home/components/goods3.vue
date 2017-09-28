@@ -3,39 +3,14 @@
      <!-- Guess you like it -->
      <div class="item">
          <ul class="goods">
-             <li>
+             <li v-for="l in list" :key="l.id">
                  <a href="#">
-                     <img src="http://kstoreimages.b0.upaiyun.com/1472542914632.jpg!160" alt="">
-                     <div class="goods-info">
-                         <h3>Midea BCD-515WKM Side-by-side combination refrigerator</h3>
-                         <span>￥3599.00</span>
+                     <div class="goods_img">
+                        <img :src="l.src">
                      </div>
-                 </a>
-             </li>
-             <li>
-                 <a href="#">
-                     <img src="http://kstoreimages.b0.upaiyun.com/1472795050639.jpg!160" alt="">
                      <div class="goods-info">
-                         <h3>Galaxy C7（SM-C7000）32Gr</h3>
-                         <span>￥2666.00</span>
-                     </div>
-                 </a>
-             </li>
-             <li>
-                 <a href="#">
-                     <img src="http://kstoreimages.b0.upaiyun.com/1472525766100.jpg!160" alt="">
-                     <div class="goods-info">
-                         <h3>Estee Lauder eye cream5ml*2(15g)</h3>
-                         <span>￥125.00</span>
-                     </div>
-                 </a>
-             </li>
-             <li>
-                 <a href="#">
-                     <img src="http://www.commoditiesinchina.com:80/upload/20170701/1498900691560!160.jpg" alt="">
-                     <div class="goods-info">
-                         <h3>OZNER JZY-A1XB-A2(Pearl White)</h3>
-                         <span>￥4980.00</span>
+                         <h3>{{l.content}}</h3>
+                         <span>￥{{l.price}}</span>
                      </div>
                  </a>
              </li>
@@ -60,7 +35,11 @@ export default {
   },
   data() {
     return {
-      title: '左图右字'
+        title: '左图右字',
+        list: [{ id: 0,price: 3599.00,src: 'http://www.commoditiesinchina.com:80/upload/20170629/1498722708289.jpg',content: 'Midea BCD-515WKM Side-by-side combination refrigerator' },
+                { id: 1,price: 2666.00,src: 'http://kstoreimages.b0.upaiyun.com/1472795050639.jpg!160',content: 'Galaxy C7（SM-C7000）32Gr' },
+                { id: 2,price: 125.00,src: 'http://kstoreimages.b0.upaiyun.com/1472525766100.jpg!160',content: 'Estee Lauder eye cream5ml*2(15g)' },
+                { id: 3,price: 4980.00,src: 'http://kstoreimages.b0.upaiyun.com/1472542914632.jpg!160',content: 'OZNER JZY-A1XB-A2(Pearl White)' }]
     }
   },
 }

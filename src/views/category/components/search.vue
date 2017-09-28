@@ -1,16 +1,13 @@
 <template>
     <div class="search">
         <diV class="s_box">
-            <!-- <div class="s_left">
-                <icon-svg icon-class="message" class="main-icons"></icon-svg>
-            </div> -->
             <div class="s_mid">
                 <icon-svg icon-class="search" class="main-icons"></icon-svg>
                 <input type="text" :placeholder="$t('搜索商品')">
             </div>
             <div class="s_right">
                 <a href="">
-                    <span :text="$t('搜索')"></span>
+                    <span v-text="$t('搜索')"></span>
                 </a>
             </div>
         </diV>
@@ -18,8 +15,10 @@
 </template>
 
 <i18n>
+搜索商品:
+ en: Search goods
 搜索:
-  en: Search
+ en: Search
 </i18n>
 
 <script>
@@ -37,8 +36,8 @@ export default {
   width: 100%;
   height: 46px;
   box-sizing: border-box;
-  padding: 7px 10px;
-  background-color:  #f10d05;
+  padding: 6px 10px 5px 10px;
+  background-color:  #FF4863;
   position: fixed;
   top:0;
   z-index: 300;
@@ -72,17 +71,17 @@ export default {
 .search .s_mid input{
   border:0;
   width: 100%;
-  height: 100%;
+  height: 35px;
   border-radius: 5px;
   outline: none;
-  background-color:#ff474f;
+  background-color:#fff;
   text-indent:30px;
   caret-color:#fff;
 }
 input::-webkit-input-placeholder{
-  color: rgba(230, 227, 227, 0.8);
+  color: rgba(200, 200, 200, 1);
   font-size:14px;
-  line-height: 33px;
+  line-height: 20px;
 }
 .s_mid .weui-search-bar{
   padding:0;

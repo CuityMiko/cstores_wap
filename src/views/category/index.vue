@@ -1,10 +1,12 @@
 <template>
     <div id="category">
+        <HTrim></HTrim>
         <Search></Search>
         <div class="content">
            <List></List>
            <ListInfo></ListInfo> 
         </div>
+        <FTrim></FTrim>
     </div>
 </template>
 
@@ -13,11 +15,15 @@
 import Search from './components/search'
 import List from './components/list'
 import ListInfo from './components/list_info'
+import HTrim from '../trim/HTrim.vue'
+import FTrim from '../trim/FTrim.vue'
 export default {
     components: {
         Search,
         List,
-        ListInfo
+        ListInfo,
+        HTrim,
+        FTrim
     },
     data() {
         return {

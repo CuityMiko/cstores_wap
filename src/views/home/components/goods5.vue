@@ -2,7 +2,7 @@
     <div id="goods4">
         <grid>
             <grid-item :label="$t('Grid')" v-for="i in 1" :key="i" style="width:100%;">
-            <img slot="icon" src="http://www.commoditiesinchina.com:80/upload/20170629/1498718247201.jpg">
+            <img slot="icon" src="http://www.commoditiesinchina.com:80/upload/20170629/1498718247201.jpg" style="">
             <span>￥3200.00</span>
             </grid-item>
         </grid> 

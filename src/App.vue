@@ -1,7 +1,12 @@
 <template>
 	<div id="app">
     <x-header v-if="header.show" :left-options="{backText: '', showBack: header.back}" :title="header.title"><a v-if="header.right" slot="right"><icon-svg :iconClass="header.icon" class="main-icons"></icon-svg></a></x-header>
-		<router-view></router-view>
+		<transition enter-class="animated fadeInLeft" enter-active-class="animated fadeInLeft" leave-class="animated fadeOutRight" leave-active-class="animated fadeOutRight">
+        <!--keep-alive：保持页面状态，可以作为页面缓存使用.可以缓存住异步请求加载的数据-->
+        <keep-alive>
+          <router-view></router-view>
+        </keep-alive>
+    </transition>
     <tabbar v-if="footer.show">
       <tabbar-item v-for="(item,index) in tabbars" :key="index" :selected="item.selected" :link='item.link'>
         <icon-svg slot="icon" :iconClass="item.imgsrc" class="main-icons"></icon-svg>
@@ -29,6 +34,9 @@
 </i18n>
 
 <script>
+  // 引入动画
+  import 'plug/animate.css/animate.min.css'
+
   import { XHeader, Tabbar, TabbarItem } from 'vux'
 
   import { constantRouterMap } from '@/router'
