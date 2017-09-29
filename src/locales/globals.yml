@@ -3,6 +3,14 @@ en:
   确定: Determine
   CStroes: CStroes
   搜索: Search
+  母婴玩具: Baby toys
+  男装女装: Search goods
+  鞋靴箱包: Shoes and bags
+  汽车用品: Automotive supplies
+  登录: Login
+  登录后可同步购物车里的商品: Login shopping cart synchronize
+  您的购物车空空如也，快去装满它: Your cart is empty. Go and fill up sit
+  去逛逛: Go to shopping
   首页: Home
   分类: Category
   购物车: Cart
@@ -10,6 +18,7 @@ en:
   我的购物车: My Cart
   商品列表: Goods List
   商品详情: Goods Detail
+  搜索商品: Search goods
   跳转商品列表: Jump to list
   内容: Content
   请输入内容: Please enter the content
@@ -34,15 +43,21 @@ en:
   我的任务: My assignment
   愿望清单: Wishlist
   猜你喜欢: Guess you will like
+  关注: wishlist
+  浏览: Browsing
+  历史: history
 zh-CN:
   温馨提示: 温馨提示
   确定: 确定
   CStroes: 丝路网云
   搜索: 搜索
+  我的: 我的
+  关注: 关注
+  浏览: 浏览
+  历史: 历史
   首页: 首页
   分类: 分类
   购物车: 购物车
-  我的: 我的
   我的购物车: 我的购物车
   商品列表: 商品列表
   商品详情: 商品详情

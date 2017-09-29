@@ -2,14 +2,14 @@
     <div>  
         <div>
             <group>
-            <cell v-text="$t('我的订单')" value="查看全部订单" is-link></cell>
+            <cell v-bind:title="$t('我的订单')" :value="$t('查看全部订单')" is-link></cell>
             </group>
         </div>
         <div class="wishlist">
             <flexbox>
                 <flexbox-item>
                     <div class="flex-demo">
-                     <icon-svg icon-class="money" class="main-icons"></icon-svg>
+                     <icon-svg icon-class="card" class="main-icons"></icon-svg>
                     </div>
                     <div class="flex-demo">
                      <a href="" class="t_size" v-text="$t('待付款')"></a>
@@ -17,7 +17,7 @@
                 </flexbox-item>
                  <flexbox-item>
                     <div class="flex-demo">
-                      <icon-svg icon-class="che" class="main-icons"></icon-svg> 
+                      <icon-svg icon-class="delivery" class="main-icons"></icon-svg> 
                     </div>
                     <div class="flex-demo">
                      <a href="" class="t_size" v-text="$t('待收货')"></a>
@@ -42,7 +42,7 @@
             </flexbox>
         </div>
         <div>
-            <group>
+            <group class="title">
             <cell v-text="$t('我的活动')" ></cell>
             </group>
         </div>
@@ -59,7 +59,7 @@
                 </flexbox-item>
                  <flexbox-item>
                     <div class="flex-demo">
-                       <icon-svg icon-class="handshake" class="main-icons"></icon-svg>
+                       <icon-svg icon-class="hand" class="main-icons"></icon-svg>
                     </div>
                     <div class="flex-demo">
                      <a href="" class="t_size" v-text="$t('查看盟友')"></a>
@@ -67,7 +67,7 @@
                 </flexbox-item>
                 <flexbox-item>
                     <div class="flex-demo">
-                     <icon-svg icon-class="xing" class="main-icons"></icon-svg>
+                     <icon-svg icon-class="star" class="main-icons"></icon-svg>
                     </div>
                     <div class="flex-demo">
                      <a href="" class="t_size" v-text="$t('积分')"></a>
@@ -76,7 +76,7 @@
             </flexbox>
         </div>
         <div>
-            <group>
+            <group class="title">
             <cell v-text="$t('我的任务')" ></cell>
             </group>
         </div>
@@ -84,7 +84,7 @@
             <flexbox>
                 <flexbox-item>
                     <div class="flex-demo">
-                     <icon-svg icon-class="hearts" class="main-icons"></icon-svg>
+                     <icon-svg icon-class="love" class="main-icons"></icon-svg>
                     </div>
                     <div class="flex-demo">
                      <a href="" class="t_size" v-text="$t('愿望清单')"></a>
@@ -121,6 +121,8 @@
 <il8n>
 我的订单:
   en: My order
+查看全部订单:
+  en: View all orders
 待付款:
   en: To Pay
 待收货:
@@ -162,10 +164,11 @@
   border-radius: 4px;
   background-clip: padding-box;
 }
-.wishlist{ margin-bottom: -0.7rem;margin-top: 0.5rem;}
+.wishlist{ margin-bottom: -0.7rem;}
 .main-icons{
     height:3rem;
     width:2rem;
 }
+.wishlist>div { margin-bottom: .2rem;}
  </style>
 

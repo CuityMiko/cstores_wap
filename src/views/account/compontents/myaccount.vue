@@ -7,7 +7,7 @@
               <div class="flex-demo" v-text="$t('我的关注')"></div>
           </flexbox-item>
           <flexbox-item class="t_size">
-              <div class="flex-demo">2</div>
+              <div class="flex-demo">12</div>
               <div class="flex-demo" v-text="$t('消息中心')"></div>
           </flexbox-item>
           <flexbox-item class="t_size">
@@ -38,13 +38,16 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 .flex-demo {
   text-align: center;
   border-radius: 4px;
   background-clip: padding-box;
 }
 .wishlist{
-  margin-bottom: -0.7rem;margin-top: 0.5rem;
+  margin-bottom: -0.7rem;
+}
+.flex-demo{
+  margin-top: .8rem;
 }
 </style>

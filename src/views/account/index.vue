@@ -4,7 +4,7 @@
     <myaccount></myaccount>
     <accountNew></accountNew>
   <div>
-    <group>
+    <group class="title">
       <cell v-text="$t('猜你喜欢')" ></cell>
     </group>
     <br>

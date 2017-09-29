@@ -1,7 +1,7 @@
 <template>
 	<div id="app">
     <x-header v-if="header.show" :left-options="{backText: '', showBack: header.back}" :title="header.title"><a v-if="header.right" slot="right"><icon-svg :iconClass="header.icon" class="main-icons"></icon-svg></a></x-header>
-		<transition enter-class="animated fadeInLeft" enter-active-class="animated fadeInLeft" leave-class="animated fadeOutRight" leave-active-class="animated fadeOutRight">
+		<transition mode="out-in" enter-active-class="animated fadeInLeftBig" leave-active-class="animated fadeOutRightBig" style="animation-duration:.5s;animation-delay:.5s;animation-iteration-count:1;animation-fill-mode:both;">
         <!--keep-alive：保持页面状态，可以作为页面缓存使用.可以缓存住异步请求加载的数据-->
         <keep-alive>
           <router-view></router-view>
