@@ -34,8 +34,8 @@
 </i18n>
 
 <script>
-  // 引入动画
-  import 'plug/animate.css/animate.css'
+  // 引入animated动画
+  import 'styles/libs/animate.min.css'
 
   import { XHeader, Tabbar, TabbarItem } from 'vux'
 

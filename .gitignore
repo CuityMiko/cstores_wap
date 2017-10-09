@@ -11,3 +11,4 @@ selenium-debug.log
 static/bower_components
 .vscode
 src/locales/globals.yml
+markdown/
