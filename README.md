@@ -73,7 +73,7 @@
 - svg文件统一存放路径：CStoresWMS\src\icons\svg
 - 如果svg文件不足以支持开发中使用，则参照 (http://www.iconsvg.com) 下载
 - CStoreFE的svg图标统一会在 (http://www.iconfont.cn) 的CStore项目中管理
-- 项目图标在iconfont上统一下载大小为200*200图标
+- 项目图标在iconfont上统一下载大小为128颜色为#8a8a8a的svg格式的图标
 
 ## 关于Eslint ##
 

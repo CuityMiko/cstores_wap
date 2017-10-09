@@ -1,119 +1,19 @@
 <template>
-    <div>  
-        <div>
+    <div>
+        <div class="wishlist" v-for="(item,key) in accountMenu" :key="key">
             <group>
-            <cell v-bind:title="$t('我的订单')" :value="$t('查看全部订单')" is-link></cell>
+              <cell v-bind:title="$t(item.title)" :value="$t(item.linktitle)" :is-link="item.islink"></cell>
             </group>
-        </div>
-        <div class="wishlist">
             <flexbox>
-                <flexbox-item>
+                <flexbox-item v-for="(detail,key) in item.list" :key="key">
                     <div class="flex-demo">
-                     <icon-svg icon-class="card" class="main-icons"></icon-svg>
+                     <icon-svg :icon-class="detail.icon" class="main-icons"></icon-svg>
                     </div>
                     <div class="flex-demo">
-                     <a href="" class="t_size" v-text="$t('待付款')"></a>
-                    </div>
-                </flexbox-item>
-                 <flexbox-item>
-                    <div class="flex-demo">
-                      <icon-svg icon-class="delivery" class="main-icons"></icon-svg> 
-                    </div>
-                    <div class="flex-demo">
-                     <a href="" class="t_size" v-text="$t('待收货')"></a>
-                    </div>
-                </flexbox-item>
-                <flexbox-item>
-                    <div class="flex-demo" >
-                     <icon-svg icon-class="accomplish" class="main-icons"></icon-svg>  
-                    </div>
-                    <div class="flex-demo">
-                     <a href="" class="t_size" v-text="$t('已完成')"></a>
-                    </div>
-                </flexbox-item>
-                 <flexbox-item>
-                    <div class="flex-demo">
-                     <icon-svg icon-class="qian" class="main-icons"></icon-svg>  
-                    </div>
-                    <div class="flex-demo">
-                     <a href="" class="t_size" v-text="$t('退款/退货')"></a>
+                     <a href="javascript:;" class="t_size" v-text="$t(detail.name)"></a>
                     </div>
                 </flexbox-item>
             </flexbox>
-        </div>
-        <div>
-            <group class="title">
-            <cell v-text="$t('我的活动')" ></cell>
-            </group>
-        </div>
-        <div>
-            <div class="wishlist">
-            <flexbox>
-                <flexbox-item>
-                    <div class="flex-demo">
-                     <icon-svg icon-class="pixelsa" class="main-icons"></icon-svg>
-                    </div>
-                    <div class="flex-demo">
-                     <a href="" class="t_size" v-text="$t('活动详情')"></a>
-                    </div>
-                </flexbox-item>
-                 <flexbox-item>
-                    <div class="flex-demo">
-                       <icon-svg icon-class="hand" class="main-icons"></icon-svg>
-                    </div>
-                    <div class="flex-demo">
-                     <a href="" class="t_size" v-text="$t('查看盟友')"></a>
-                    </div>
-                </flexbox-item>
-                <flexbox-item>
-                    <div class="flex-demo">
-                     <icon-svg icon-class="star" class="main-icons"></icon-svg>
-                    </div>
-                    <div class="flex-demo">
-                     <a href="" class="t_size" v-text="$t('积分')"></a>
-                    </div>
-                </flexbox-item>
-            </flexbox>
-        </div>
-        <div>
-            <group class="title">
-            <cell v-text="$t('我的任务')" ></cell>
-            </group>
-        </div>
-         <div class="wishlist">
-            <flexbox>
-                <flexbox-item>
-                    <div class="flex-demo">
-                     <icon-svg icon-class="love" class="main-icons"></icon-svg>
-                    </div>
-                    <div class="flex-demo">
-                     <a href="" class="t_size" v-text="$t('愿望清单')"></a>
-                    </div>
-                </flexbox-item>
-                 <flexbox-item>
-                    <div class="flex-demo">
-                    </div>
-                    <div class="flex-demo">
-                     <a href="" class="t_size"></a>
-                    </div>
-                </flexbox-item>
-                <flexbox-item>
-                    <div class="flex-demo">
-                    </div>
-                    <div class="flex-demo">
-                     <a href="" class="t_size"></a>
-                    </div>
-                </flexbox-item>
-                 <flexbox-item>
-                    <div class="flex-demo">
-                    </div>
-                    <div class="flex-demo">
-                     <a href="" class="t_size"></a>
-                    </div>
-                </flexbox-item>
-            </flexbox>
-        </div>
-        </div>
         </div>
     </div>
 </template>
@@ -147,6 +47,9 @@
 
 <script>
  import { Group, Cell, CellBox, Flexbox, FlexboxItem, Divider } from 'vux'
+
+ import { accountMenu } from '../data'
+
  export default {
     components: {
         Group,
@@ -158,9 +61,7 @@
     },
     data() {
         return {
-            menulist:[
-                { title:this.$t('我的订单'), islink:true, linktitle:''}
-            ]
+            accountMenu,
         }
     }
  }
