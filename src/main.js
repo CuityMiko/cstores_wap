@@ -55,13 +55,13 @@ Vue.use(vuexI18n.plugin, store)
 // vux的全局国际化配置
 const vuxLocales = require('json-loader!yaml-loader!vux/src/locales/all.yml')
 
-// 组件的全局国际化配置
-const componentsLocales = require('json-loader!yaml-loader!@/locales/globals.yml')
+// 页面合并国际化配置
+const globalsLocales = require('json-loader!yaml-loader!@/locales/globals.yml')
 
 // 合并全局的国际化配置
 const finalLocales = {
-  'en': objectAssign(vuxLocales['en'], componentsLocales['en']),
-  'zh-CN': objectAssign(vuxLocales['zh-CN'], componentsLocales['zh-CN'])
+  'en': objectAssign(vuxLocales['en'], globalsLocales['en']),
+  'zh-CN': objectAssign(vuxLocales['zh-CN'], globalsLocales['zh-CN'])
 }
 
 for (const i in finalLocales) {

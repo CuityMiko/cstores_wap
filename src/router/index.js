@@ -30,7 +30,8 @@ export const constantRouterMap = [
   { path: '/login', component: _import('login/index'), name: 'login', header: false, footer: false, title: '登录' },
   { path: '/search', component: _import('search/index'), name: 'search', header: false, footer: false, title: '搜索' },
   { path: '/', redirect: '/home' }, // 如果路由为/的时候跳转到/home路由
-  { path: '*', component: _import('errorPage/404'), name: '404', header: true, title: 'CStores', back: true }
+  { path: '*', component: _import('errorPage/404'), name: '404', header: true, title: 'CStores', back: true },
+  { path: '/account/setting', component: _import('account/compontents/mySetting'), name: 'setting', header: true, footer: true, title: '设置', back: true, right: true, icon: 'more2' }
 ]
 
 export default new Router({

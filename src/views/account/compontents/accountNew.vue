@@ -155,10 +155,18 @@
         Flexbox,
         FlexboxItem,
         Divider
+    },
+    data() {
+        return {
+            menulist:[
+                { title:this.$t('我的订单'), islink:true, linktitle:''}
+            ]
+        }
     }
  }
  </script>
  <style scoped>
+
  .flex-demo {
   text-align: center;
   border-radius: 4px;

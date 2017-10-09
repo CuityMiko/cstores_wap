@@ -1,7 +1,7 @@
 <template>
 	<div id="app">
     <x-header v-if="header.show" :left-options="{backText: '', showBack: header.back}" :title="header.title"><a v-if="header.right" slot="right"><icon-svg :iconClass="header.icon" class="main-icons"></icon-svg></a></x-header>
-		<transition name="fade" mode="out-in" enter-active-class="animated fadeInLeftBig" leave-class="animated fadeOutRightBig">
+		<transition mode="out-in" enter-active-class="animated fadeInLeftBig" leave-active-class="animated fadeOutRightBig">
         <!--keep-alive：保持页面状态，可以作为页面缓存使用.可以缓存住异步请求加载的数据-->
         <keep-alive>
           <router-view></router-view>
@@ -35,7 +35,7 @@
 
 <script>
   // 引入动画
-  import 'plug/animate.css/animate.min.css'
+  import 'plug/animate.css/animate.css'
 
   import { XHeader, Tabbar, TabbarItem } from 'vux'
 

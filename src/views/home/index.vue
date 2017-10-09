@@ -65,12 +65,12 @@ export default {
     Search,
     HistorySearch,
     HTrim,
-    FTrim
+    FTrim,
   },
   data() {
     return {
       title: '首页',
-      flag: false
+      flag: false,
     }
   }
 }

@@ -3,18 +3,19 @@
     <accountheader></accountheader>
     <myaccount></myaccount>
     <accountNew></accountNew>
-  <div>
-    <group class="title">
-      <cell v-text="$t('猜你喜欢')" ></cell>
-    </group>
-    <br>
+    <div>
+      <group class="title">
+        <cell v-text="$t('猜你喜欢')" ></cell>
+      </group>
       <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-  </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <mySetting></mySetting>
   </div>
 </template>
 <il8n>
@@ -25,6 +26,7 @@
     import accountheader from './compontents/header'
     import accountNew from './compontents/accountNew'
     import myaccount from './compontents/myaccount'
+    import mySetting from './compontents/mySetting'
     import { Group, Cell, CellBox, Card } from 'vux'
 
 export default {
@@ -35,7 +37,8 @@ export default {
     Card,
     accountheader,
     accountNew,
-    myaccount
+    myaccount,
+    mySetting
   },
   data() {
       return {
