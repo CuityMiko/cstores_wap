@@ -40,7 +40,7 @@ export default {
     border-left: 1px solid #ececec;
 }
 #list_info .box2{
-    height: 580px;
+    height: 640px;
     overflow-y: scroll;    
 }
 #list_info .box2 p{

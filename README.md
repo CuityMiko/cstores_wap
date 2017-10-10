@@ -36,6 +36,7 @@
 ```shell
 ├── build                      // 构建相关  
 ├── config                     // 配置相关
+├── markdown                   // 针对src目录的相关说明文档
 ├── src                        // 源代码
 │   ├── api                    // 所有请求
 │   ├── assets                 // 主题 字体等静态资源
@@ -49,6 +50,7 @@
 │   ├── utils                  // 全局公用方法
 │   ├── view                   // view
 │   ├── App.vue                // 入口页面
+│   ├── App.md                 // 入口页面说明文档
 │   └── main.js                // 入口 加载组件 初始化等
 ├── static                     // 第三方不打包资源
 │   └── Tinymce                // 富文本

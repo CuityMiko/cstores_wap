@@ -1,21 +1,13 @@
 <template>
   <div class="account">
-    <accountheader></accountheader>
-    <myaccount></myaccount>
-    <accountNew></accountNew>
+    <accountHeader></accountHeader>
+    <accountMsg></accountMsg>
+    <accountMenu></accountMenu>
     <div>
       <group class="title">
         <cell v-text="$t('猜你喜欢')" ></cell>
       </group>
-      <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
     </div>
-    <mySetting></mySetting>
   </div>
 </template>
 <il8n>
@@ -23,11 +15,11 @@
   en: Guess you will like
 </il8n>
 <script>
-    import accountheader from './compontents/header'
-    import accountNew from './compontents/accountNew'
-    import myaccount from './compontents/myaccount'
-    import mySetting from './compontents/mySetting'
-    import { Group, Cell, CellBox, Card } from 'vux'
+import accountheader from './compontents/header'
+import accountNew from './compontents/accountNew'
+import myaccount from './compontents/myaccount'
+
+import { Group, Cell, CellBox, Card } from 'vux'
 
 export default {
   components: {
@@ -35,10 +27,9 @@ export default {
     Cell,
     CellBox,
     Card,
-    accountheader,
-    accountNew,
-    myaccount,
-    mySetting
+    accountHeader,
+    accountMenu,
+    accountMsg
   },
   data() {
       return {

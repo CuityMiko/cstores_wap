@@ -48,7 +48,7 @@ export default {
     width: 150px;    
 }
 #list .box2{
-    height: 580px;
+    height: 640px;
     overflow-y: scroll;
 }
 #list .box2>p{

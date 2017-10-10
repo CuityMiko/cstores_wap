@@ -4,7 +4,5 @@
   "description": "A Vue.js System Bower for CStroes mobile h5",
   "homepage": "https://github.com/CuityMiko",
   "license": "ISC",
-  "dependencies": {
-    "animate.css": "^3.5.2"
-  }
+  "dependencies": {}
 }

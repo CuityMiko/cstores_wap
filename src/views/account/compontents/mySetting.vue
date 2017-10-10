@@ -79,4 +79,8 @@ export default {
   background-color: #FF4863;;
   color:#fff;
 }
+.weui-cell .weui-cell__ft{
+  flex: 1;
+  text-align: left;
+}
 </style>
