@@ -18,6 +18,7 @@
       </div> 
   </div>
 </template>
+
 <i18n>
 我的关注:
  en: My wishlist
@@ -28,26 +29,23 @@
 </i18n>
 
 <script>
-import { Flexbox, FlexboxItem, Divider } from 'vux'
+  import { Flexbox, FlexboxItem } from 'vux'
 
-export default {
-  components: {
-    Flexbox,
-    FlexboxItem,
-    Divider
+  export default {
+    components: {
+      Flexbox,
+      FlexboxItem
+    }
   }
-}
 </script>
 <style scoped>
-.flex-demo {
-  text-align: center;
-  border-radius: 4px;
-  background-clip: padding-box;
-}
-.wishlist{
-  margin-bottom: -0.7rem;
-}
-.flex-demo{
-  margin-top: .8rem;
-}
+  .flex-demo {
+    text-align: center;
+    border-radius: 4px;
+    background-clip: padding-box;
+    margin-top: .8rem;
+  }
+  .wishlist{
+    margin-bottom: -0.7rem;
+  }
 </style>

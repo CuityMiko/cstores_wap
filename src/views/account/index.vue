@@ -10,33 +10,33 @@
     </div>
   </div>
 </template>
+
 <il8n>
 猜你喜欢:
   en: Guess you will like
 </il8n>
+
 <script>
-import accountheader from './compontents/header'
-import accountNew from './compontents/accountNew'
-import myaccount from './compontents/myaccount'
+  import accountHeader from './compontents/accountHeader'
+  import accountMsg from './compontents/accountMsg'
+  import accountMenu from './compontents/accountMenu'
 
-import { Group, Cell, CellBox, Card } from 'vux'
+  import { Group, Cell } from 'vux'
 
-export default {
-  components: {
-    Group,
-    Cell,
-    CellBox,
-    Card,
-    accountHeader,
-    accountMenu,
-    accountMsg
-  },
-  data() {
-      return {
-        title: ''
-      }
+  export default {
+    components: {
+      Group,
+      Cell,
+      accountHeader,
+      accountMenu,
+      accountMsg
+    },
+    data() {
+        return {
+          title: ''
+        }
+    }
   }
-}
 </script>
 
 

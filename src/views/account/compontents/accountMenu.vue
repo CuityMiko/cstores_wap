@@ -46,38 +46,35 @@
 </il8n>
 
 <script>
- import { Group, Cell, CellBox, Flexbox, FlexboxItem, Divider } from 'vux'
+  import { Group, Cell, Flexbox, FlexboxItem } from 'vux'
 
- import { accountMenu } from '../data'
+  import { accountMenu } from '../data'
 
- export default {
-    components: {
-        Group,
-        Cell,
-        CellBox,
-        Flexbox,
-        FlexboxItem,
-        Divider
-    },
-    data() {
-        return {
-            accountMenu,
-        }
-    }
- }
- </script>
- <style scoped>
-
- .flex-demo {
-  text-align: center;
-  border-radius: 4px;
-  background-clip: padding-box;
-}
-.wishlist{ margin-bottom: -0.7rem;}
-.main-icons{
-    height:3rem;
-    width:2rem;
-}
-.wishlist>div { margin-bottom: .2rem;}
- </style>
+  export default {
+      components: {
+          Group,
+          Cell,
+          Flexbox,
+          FlexboxItem
+      },
+      data() {
+          return {
+              accountMenu
+          }
+      }
+  }
+</script>
+<style scoped>
+  .flex-demo {
+    text-align: center;
+    border-radius: 4px;
+    background-clip: padding-box;
+  }
+  .wishlist{ margin-bottom: -0.7rem;}
+  .main-icons{
+      height:3rem;
+      width:2rem;
+  }
+  .wishlist>div { margin-bottom: .2rem;}
+</style>
 

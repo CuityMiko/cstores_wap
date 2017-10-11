@@ -29,9 +29,11 @@ export const constantRouterMap = [
   },
   { path: '/login', component: _import('login/index'), name: 'login', header: false, footer: false, title: '登录' },
   { path: '/search', component: _import('search/index'), name: 'search', header: false, footer: false, title: '搜索' },
+  { path: '/member', component: _import('member/index'), name: 'member', header: true, footer: true, title: '用户中心', back: true, right: true, icon: 'more2' },
+
+  // 以下两个路由为全局路由，需要在最下面
   { path: '/', redirect: '/home' }, // 如果路由为/的时候跳转到/home路由
-  { path: '*', component: _import('errorPage/404'), name: '404', header: true, title: 'CStores', back: true },
-  { path: '/account/setting', component: _import('account/compontents/mySetting'), name: 'setting', header: true, footer: true, title: '设置', back: true, right: true, icon: 'more2' }
+  { path: '*', component: _import('errorPage/404'), name: '404', header: true, title: 'CStores', back: true }
 ]
 
 export default new Router({
