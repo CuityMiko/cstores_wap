@@ -14,14 +14,11 @@
 </template>
 
 <i18n>
-内容:
-  en: Content
-请输入内容:
-  en: Please enter the content
 </i18n>
 
 <script>
 import { Flexbox,FlexboxItem } from 'vux'
+
 export default {
   components: {
     Flexbox,
@@ -47,21 +44,20 @@ export default {
     display: block;
 }
 .vux-flexbox .vux-flexbox-item{
-    display: inline-block;
-    width: 207px;
+    display: block;
     float: left;
 }
 .vux-flexbox .vux-flexbox-item:nth-child(1){
-    width: 207px;
+    width: 50%;
 }
 .vux-flexbox:nth-child(2) .vux-flexbox-item{
-    height: 103.75px;
+    height: 97.5px;
 }
 .vux-flexbox:nth-child(n+3) .vux-flexbox-item{
-    width: 103.5px;
-    height: 103.5px;
+    width: 25%;
+    height: 97.5px;
 }
 .flex-demo{
-    height: 103.5px;
+    height: 97.5px;
 }
 </style>

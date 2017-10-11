@@ -11,12 +11,11 @@
 </template>
 
 <i18n>
-跳转商品列表:
-  en: Jump to list
 </i18n>
 
 <script>
 import { Flexbox,FlexboxItem } from 'vux'
+
 export default {
     components: {
         Flexbox,

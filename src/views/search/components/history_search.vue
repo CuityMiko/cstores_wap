@@ -1,13 +1,16 @@
 <template>
     <div class="search">
         <diV class="s_box">
+            <router-link class="s_left" to="home">
+                <icon-svg icon-class="close" class="main-icons"></icon-svg>
+            </router-link>
             <div class="s_mid">
                 <icon-svg icon-class="search" class="main-icons"></icon-svg>
                 <input type="text" :placeholder="$t('搜索商品')">
             </div>
             <div class="s_right">
                 <a href="">
-                    <span v-text="$t('搜索')"></span>
+                    <span :text="$t('搜索')"></span>
                 </a>
             </div>
         </diV>
@@ -15,10 +18,8 @@
 </template>
 
 <i18n>
-搜索商品:
- en: Search goods
 搜索:
- en: Search
+  en: Search
 </i18n>
 
 <script>
@@ -36,8 +37,8 @@ export default {
   width: 100%;
   height: 46px;
   box-sizing: border-box;
-  padding: 6px 10px 5px 10px;
-  background-color:  #FF4863;
+  padding: 7px 7px 10px;
+  background: #dfdfdf;
   position: fixed;
   top:0;
   z-index: 300;
@@ -47,8 +48,11 @@ export default {
   height: 100%;
 }
 .search .s_left{
-  width: 45px;
+  width: 33px;
   height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .search .s_left>img{
   width: 100%;
@@ -58,7 +62,7 @@ export default {
   display: flex;
   flex: 2;
   border-radius: 5px;
-  margin-right: 10px;
+  margin: 0 15px;
   position: relative;
 }
 .search .s_mid .main-icons{
@@ -66,12 +70,12 @@ export default {
   height: 20px;
   position: absolute;
   left: 5px;
-  top:7px;
+  top:5px;
 }
 .search .s_mid input{
   border:0;
   width: 100%;
-  height: 35px;
+  height: 100%;
   border-radius: 5px;
   outline: none;
   background-color:#fff;
@@ -79,9 +83,9 @@ export default {
   caret-color:#000;
 }
 input::-webkit-input-placeholder{
-  color: rgba(200, 200, 200, 1);
+  color: #666;
   font-size:14px;
-  line-height: 20px;
+  line-height: 30px;
 }
 .s_mid .weui-search-bar{
   padding:0;
@@ -92,7 +96,7 @@ input::-webkit-input-placeholder{
   height: 100%;
   margin-top: 3px;
   line-height: 28px;
-  color:#fff;
+  color:#666;
   font-size: 14px;
   letter-spacing: 1px;
 }

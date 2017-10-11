@@ -1,10 +1,8 @@
 <template>
   <div id="index">
-    <HistorySearch v-if="flag"></HistorySearch>
-    <Search v-if="flag"></Search>
     <IndexSearch></IndexSearch>
     <Banner></Banner>
-    <RotRecommend></RotRecommend>
+    <Navigation></Navigation>
     <Word></Word>
     <Goods1></Goods1>
     <Advert></Advert>
@@ -16,23 +14,19 @@
     <Goods3></Goods3>
     <Word></Word>
     <Goods4></Goods4>
-    <trim></trim>
+    <Placeholder></Placeholder>
     <Word></Word>
     <Goods5></Goods5>
   </div>
 </template>
 
 <i18n>
-内容:
-  en: Content
-请输入内容:
-  en: Please enter the content
 </i18n>
 
 <script>
 import IndexSearch from './components/index_search.vue'
 import Banner from './components/banner.vue'
-import RotRecommend from './components/RotRecommend.vue'
+import Navigation from './components/navigation.vue'
 import Word from './components/word'
 import Goods1 from './components/goods1.vue'
 import Goods2 from './components/goods2.vue'
@@ -41,15 +35,13 @@ import Goods4 from './components/goods4.vue'
 import Goods5 from './components/goods5.vue'
 import Advert from './components/advert'
 import PartLine from './components/partLine'
-import Trim from './components/trim'
-import HistorySearch from './components/history_search.vue'
-import Search from './components/search.vue'
+import Placeholder from './components/placeholder'
 
 export default {
   components: {
     IndexSearch,
     Banner,
-    RotRecommend,
+    Navigation,
     Word,
     Goods1,
     Goods2,
@@ -58,14 +50,11 @@ export default {
     Goods5,
     Advert,
     PartLine,
-    Trim,
-    Search,
-    HistorySearch
+    Placeholder
   },
   data() {
     return {
       title: '首页',
-      flag: false,
     }
   }
 }

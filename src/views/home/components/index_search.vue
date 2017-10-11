@@ -1,19 +1,18 @@
 <template>
     <div class="index_search">
+      <!-- <router-link to="search"> -->
         <diV class="s_box">
-            <!-- <div class="s_left">
-                <img src="../../../assets/images/logo_c.png">
-            </div> -->
-            <div class="s_mid">
-                <icon-svg icon-class="search" class="main-icons"></icon-svg>
-                <input type="text" :placeholder="$t('搜索商品')">
-            </div>
-            <div class="s_right">
-                <a href="" class="message">
-                <icon-svg icon-class="message" class="main-icons"></icon-svg>
-                </a>
-            </div>
+          <router-link class="s_mid" to="search">
+              <icon-svg icon-class="search" class="main-icons"></icon-svg>
+              <input type="text" :placeholder="$t('搜索商品')">
+          </router-link>
+          <div class="s_right">
+              <a href="" class="message">
+              <icon-svg icon-class="message" class="main-icons"></icon-svg>
+              </a>
+          </div>
         </diV>
+      <!-- </router-link> -->
     </div>
 </template>
 
@@ -44,14 +43,6 @@ export default {
 }
 #index .index_search .s_box{
   display: flex;
-}
-#index .index_search .s_left{
-  width: 45px;
-  height: 33px;
-}
-#index .index_search .s_left>img{
-  width: 100%;
-  height: 100%;
 }
 #index .index_search .s_mid{
   display: flex;
