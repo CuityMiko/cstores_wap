@@ -1,37 +1,22 @@
 <template>
   <div id="navigation">
-    <grid>
-        <grid-item>
+    <grid >
+        <grid-item v-for=" l in navigationMenu" :key="l.id">
             <div class="grids">
-              <img slot="icon" src="http://kstoreimages.b0.upaiyun.com/1477899820047.jpg">
-              <span slot="lable">Livin</span>
+              <img slot="icon" :src="l.src">
+              <span slot="lable">{{l.content}}</span>
             </div>
-        </grid-item>
-        <grid-item>
-          <div class="grids">
-            <img slot="icon" src="http://kstoreimages.b0.upaiyun.com/1477899827923.jpg">
-            <span>compa</span>
-          </div> 
-        </grid-item>
-        <grid-item>
-          <div class="grids">
-            <img slot="icon" src="http://kstoreimages.b0.upaiyun.com/1477899836606.jpg">
-            <span>Beaut</span>
-          </div>
         </grid-item>
     </grid>
   </div>
 </template>
 
 <i18n>
-内容:
-  en: Content
-请输入内容:
-  en: Please enter the content
 </i18n>
 
 <script>
 import { Swiper, Grid, GridItem } from 'vux'
+import { navigationMenu } from '../data'
 export default {
   components: {
     Swiper,
@@ -40,7 +25,8 @@ export default {
   },
   data() {
     return {
-      msg: 'Hello World!',
+      title: '导航',
+      navigationMenu
     }
   }
 }
@@ -63,5 +49,8 @@ export default {
 }
 #index .weui-grid:before,.weui-grid:after{
   border:0;
+}
+.weui-grid{
+  padding: 10px;
 }
 </style>

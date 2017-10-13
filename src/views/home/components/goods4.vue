@@ -1,7 +1,7 @@
 <template>
     <div id="goods4">
         <grid>
-            <grid-item v-for="l in list" :key="l.id" style="width:50%;">
+            <grid-item v-for="l in goods4Menu" :key="l.id" style="width:50%;">
             <img slot="icon" :src="l.src">
             <p class="info">{{l.content}}</p>
             <span class="price">￥{{l.price}}</span>
@@ -15,6 +15,7 @@
 
 <script>
 import { Grid, GridItem } from 'vux'
+import { goods4Menu } from '../data'
 
 export default {
     components: {
@@ -24,10 +25,7 @@ export default {
     data() {
         return {
             title: '四图平分',
-            list: [{ id: 0,price: 3200.00,src: 'http://www.commoditiesinchina.com:80/upload/20170629/1498718247201.jpg',content: 'Midea BCD-515WKM Side-by-side' },
-                    { id: 1,price: 320.00,src: 'http://www.commoditiesinchina.com:80/upload/20170629/1498718277454.jpg',content: 'Galaxy C7（SM-C7000）32Gr' },
-                    { id: 2,price: 125.00,src: 'http://www.commoditiesinchina.com:80/upload/20170629/1498718302803.jpg',content: 'Estee Lauder eye cream5ml*2(15g)' },
-                    { id: 3,price: 220.00,src: 'http://kstoreimages.b0.upaiyun.com/1472525766100.jpg!160',content: 'OZNER JZY-A1XB-A2(Pearl White)' }]
+            goods4Menu
         }
     }
 }

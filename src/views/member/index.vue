@@ -7,18 +7,22 @@
            <span>白银会员</span>
          </div>
        </cell>
-       <x-input :title="$t('昵称')" v-model="value3" is-link value-align="left"></x-input>
-       <popup-picker v-if="!switch6" :title="$t('性别')" :data="['男女'.split('')]" v-model="value6"></popup-picker>
-       <x-input :title="$t('手机号')" v-model="value4" is-link value-align="left"></x-input>
+       <x-input :title="$t('昵称')" v-model="value3" is-link text-align="right"></x-input>
+       <popup-picker v-if="!switch6" :title="$t('性别')" :data="['男女'.split('')]" v-model="value6" ></popup-picker>
+       <x-input :title="$t('手机号')" v-model="value4" is-link text-align="right"></x-input>
        <cell :title="$t('绑定邮箱')" is-link value-align="left"></cell>
     </group>
     <group>
-      <cell :title="$t('收货地址管理')" is-link value-align="left"></cell>
-      <cell :title="$t('账号安全')" is-link value-align="left"></cell>
+      <cell is-link>
+        <span slot="title" style="color:#0894ec;"><span style="vertical-align:middle;">{{ $t('收货地址管理') }}</span></span>
+      </cell>
+      <cell is-link>
+        <span slot="title" style="color:#0894ec;"><span style="vertical-align:middle;">{{ $t('账号安全') }}</span></span>
+      </cell>
     </group>
-    <div class="button">
+    <router-link class="button" to="login">
            <x-button v-text="$t('退出当前登录')"></x-button>
-    </div>
+    </router-link>
   </div>
 </template>
 
@@ -39,10 +43,17 @@
   en: Account security
 退出当前登录:
   en: Exit current login
+白银会员:
+  en: Silver member
+男:
+  en: man
+女:
+  en: woman
 </i18n>
 
 <script>
 import { XInput, Group, XButton, Cell, PopupPicker } from 'vux'
+
 export default {
   components: {
     XInput,
@@ -73,14 +84,17 @@ export default {
   font-size: .9286em;
 }
 .button{
+  display: block;
   padding: 20px 10px;
 }
 .weui-btn_default{
   background-color: #FF4863;;
   color:#fff;
 }
-.weui-cell .weui-cell__ft{
-  flex: 1;
-  text-align: left;
+.weui-cell__bd input{
+  text-align: right;
+}
+.vux-cell-bd{
+  color: #0894ec;
 }
 </style>

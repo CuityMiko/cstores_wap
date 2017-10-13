@@ -2,7 +2,7 @@
     <div>
         <div class="wishlist" v-for="(item,key) in accountMenu" :key="key">
             <group>
-              <cell v-bind:title="$t(item.title)" :value="$t(item.linktitle)" :is-link="item.islink"></cell>
+              <cell v-bind:title="$t(item.title)" :value="$t(item.linktitle)" :is-link="item.islink" :link="item.linkurl"></cell>
             </group>
             <flexbox>
                 <flexbox-item v-for="(detail,key) in item.list" :key="key">

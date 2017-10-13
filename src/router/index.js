@@ -30,6 +30,7 @@ export const constantRouterMap = [
   { path: '/login', component: _import('login/index'), name: 'login', header: false, footer: false, title: '登录' },
   { path: '/search', component: _import('search/index'), name: 'search', header: false, footer: false, title: '搜索' },
   { path: '/member', component: _import('member/index'), name: 'member', header: true, footer: true, title: '用户中心', back: true, right: true, icon: 'more2' },
+  { path: '/messages', component: _import('account/containers/messages'), name: 'messages', header: true, footer: true, title: '消息通知', back: true, right: false },
 
   // 以下两个路由为全局路由，需要在最下面
   { path: '/', redirect: '/home' }, // 如果路由为/的时候跳转到/home路由

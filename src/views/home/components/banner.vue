@@ -9,24 +9,25 @@
 
 <script>
 import { Swiper } from 'vux'
+import { bannerMenu } from '../data'
 
-const urlList = [{
-  url: 'javascript:',
-  img: 'http://www.commoditiesinchina.com:80/upload/20170626/1498444834966.jpg',
-}, {
-  url: 'javascript:',
-  img: 'http://www.commoditiesinchina.com:80/upload/20170626/1498444854288.jpg',
-}, {
-  url: 'javascript:',
-  img: 'http://www.commoditiesinchina.com:80/upload/20170626/1498444815848.jpg',
-}]
+// const bannerMenu = [{
+//   url: 'javascript:',
+//   img: 'http://www.commoditiesinchina.com:80/upload/20170626/1498444834966.jpg',
+// }, {
+//   url: 'javascript:',
+//   img: 'http://www.commoditiesinchina.com:80/upload/20170626/1498444854288.jpg',
+// }, {
+//   url: 'javascript:',
+//   img: 'http://www.commoditiesinchina.com:80/upload/20170626/1498444815848.jpg',
+// }]
 export default {
   components: {
     Swiper
   },
   data() {
     return {
-      banner_list: urlList,
+      banner_list: bannerMenu,
     }
   },
 }

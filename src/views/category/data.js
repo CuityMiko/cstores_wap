@@ -1,17 +1,21 @@
 /**
  * 分类静态数据源
  */
+/*
+listMenu是商品列表数据源
+list_infoMenu是商品详情数据源
+*/
+export const listMenu = [
+    'Appliances','Mobil','Phones','Computer','母婴玩具','男装女装','鞋靴箱包','Beauty、Accessories','汽车用品','母婴玩具','母婴玩具','母婴玩具','母婴玩具','母婴玩具','母婴玩具'
+]
 
-
-export const categorytMenu = [
-    { title: '商品列表', list: [
-      'Appliances','Mobil','Phones','Computer',this.$t('母婴玩具'),this.$t('男装女装'),this.$t('鞋靴箱包'),'Beauty、Accessories',this.$t('汽车用品'),this.$t('母婴玩具'),this.$t('母婴玩具'),this.$t('母婴玩具'),this.$t('母婴玩具'),this.$t('母婴玩具'),this.$t('母婴玩具')
-    ] },
-    { title: '商品详情', list: [
-      { name: '活动详情', icon: 'pixelsa', url: '' },
-      { name: '查看盟友', icon: 'hand', url: '' },
-      { name: '积分', icon: 'star', url: '' },
-      { name: '', icon: '', url: '' }
-    ] }
-  ]
-  
+export const list_infoMenu = [
+  { id: 0,title: 'TV',src: 'http://www.commoditiesinchina.com:80/upload/20170629/1498722708289.jpg',content: 'Water dispense' },
+  { id: 1,title: 'AC',src: 'http://www.commoditiesinchina.com:80/upload/20170629/1498722708289.jpg',content: 'Water dispense' },
+  { id: 2,title: 'Washing machine',src: 'http://www.commoditiesinchina.com:80/upload/20170629/1498722708289.jpg',content: 'Water dispense' },
+  { id: 3,title: 'Living appliance',src: 'http://www.commoditiesinchina.com:80/upload/20170629/1498722708289.jpg',content: 'Water dispense' },
+  { id: 4,title: 'kitchen applianc',src: 'http://www.commoditiesinchina.com:80/upload/20170629/1498722708289.jpg',content: 'Water dispense' },
+  { id: 5,title: 'applianc',src: 'http://www.commoditiesinchina.com:80/upload/20170629/1498722708289.jpg',content: 'Water dispense' },
+  { id: 6,title: 'domestic applian',src: 'http://www.commoditiesinchina.com:80/upload/20170629/1498722708289.jpg',content: 'Water dispense' },
+  { id: 7,title: 'Health Care',src: 'http://www.commoditiesinchina.com:80/upload/20170629/1498722708289.jpg',content: 'Water dispense' }
+]

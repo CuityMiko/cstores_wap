@@ -1,6 +1,6 @@
 <template>
     <div id="advert">
-        <flexbox>
+        <flexbox v-for="l in advertMenu" :key="l">
             <flexbox-item>
                 <div class="flex-demo">
                     <img src="http://www.commoditiesinchina.com:80/upload/20170630/1498822973522.jpg">
@@ -15,6 +15,7 @@
 
 <script>
 import { Flexbox,FlexboxItem } from 'vux'
+import { advertMenu } from '../data'
 
 export default {
     components: {
@@ -24,6 +25,7 @@ export default {
     data() {
         return {
             title: '广告',
+            advertMenu
         }
     }
 }

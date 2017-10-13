@@ -2,7 +2,7 @@
   <div id="goods">
      <!-- Featured recommendation -->
      <div class="item">
-        <flexbox :gutter="0" v-for="l in list" :key="l">
+        <flexbox :gutter="0" v-for="l in goods1Menu" :key="l">
             <flexbox-item>
                 <div class="flex-demo">
                 <img :src="l">
@@ -18,6 +18,7 @@
 
 <script>
 import { Flexbox,FlexboxItem } from 'vux'
+import { goods1Menu } from '../data'
 
 export default {
   components: {
@@ -27,10 +28,7 @@ export default {
   data() {
     return {
         title: '左一右三',
-        list: ['http://www.commoditiesinchina.com:80/upload/20170629/1498718247201.jpg',
-        'http://www.commoditiesinchina.com:80/upload/20170629/1498718266009.jpg',
-        'http://www.commoditiesinchina.com:80/upload/20170629/1498718277454.jpg',
-        'http://www.commoditiesinchina.com:80/upload/20170629/1498718302803.jpg']
+        goods1Menu,
     }
   },
 }

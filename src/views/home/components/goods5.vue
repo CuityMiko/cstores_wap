@@ -1,10 +1,10 @@
 <template>
     <div id="goods5">
         <grid>
-            <grid-item style="width:100%;">
-            <img slot="icon" src="http://www.commoditiesinchina.com:80/upload/20170629/1498718247201.jpg" style="">
-            <p class="info">Haier/海尔多门大容量冷藏冷冻风冷无霜电</p>
-            <span>￥3200.00</span>
+            <grid-item style="width:100%;" v-for="l in goods5Menu" :key="l.id">
+            <img slot="icon" :src="l.src">
+            <p class="info">{{l.content}}</p>
+            <span>￥{{l.price}}</span>
             </grid-item>
         </grid> 
     </div>
@@ -15,6 +15,7 @@
 
 <script>
 import { Grid, GridItem } from 'vux'
+import { goods5Menu } from '../data'
 
 export default {
     components: {
@@ -24,6 +25,7 @@ export default {
     data() {
         return {
             title: '大图',
+            goods5Menu
         }
     }
 }

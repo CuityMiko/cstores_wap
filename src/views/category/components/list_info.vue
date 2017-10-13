@@ -1,7 +1,7 @@
 <template>
     <div id="list_info">
         <div class="box2">
-            <div v-for="i in list" :key="i.id">
+            <div v-for="i in list_infoMenu" :key="i.id">
                 <p>{{i.title}}</p>
                 <img :src="i.src" alt="">
                 <span>{{i.content}}</span>
@@ -12,6 +12,7 @@
 </template>
 <script>
 import { ViewBox } from 'vux'
+import { list_infoMenu } from '../data'
 
 export default {
     components: {
@@ -20,14 +21,7 @@ export default {
     data() {
         return {
             title: '商品详情',
-            list: [{ id: 0,title: 'TV',src: 'http://www.commoditiesinchina.com:80/upload/20170629/1498722708289.jpg',content: 'Water dispense' },
-                { id: 1,title: 'AC',src: 'http://www.commoditiesinchina.com:80/upload/20170629/1498722708289.jpg',content: 'Water dispense' },
-                { id: 2,title: 'Washing machine',src: 'http://www.commoditiesinchina.com:80/upload/20170629/1498722708289.jpg',content: 'Water dispense' },
-                { id: 3,title: 'Living appliance',src: 'http://www.commoditiesinchina.com:80/upload/20170629/1498722708289.jpg',content: 'Water dispense' },
-                { id: 4,title: 'kitchen applianc',src: 'http://www.commoditiesinchina.com:80/upload/20170629/1498722708289.jpg',content: 'Water dispense' },
-                { id: 5,title: 'applianc',src: 'http://www.commoditiesinchina.com:80/upload/20170629/1498722708289.jpg',content: 'Water dispense' },
-                { id: 6,title: 'domestic applian',src: 'http://www.commoditiesinchina.com:80/upload/20170629/1498722708289.jpg',content: 'Water dispense' },
-                { id: 7,title: 'Health Care',src: 'http://www.commoditiesinchina.com:80/upload/20170629/1498722708289.jpg',content: 'Water dispense' }]
+            list_infoMenu
         }
     }
 }

@@ -1,7 +1,7 @@
 <template>
     <div id="list">
         <div class="box2">
-            <p v-for="i in list" :key="i">{{i}}</p>
+            <p v-for="i in listMenu" :key="i">{{i}}</p>
         </div>
     </div>
 </template>
@@ -24,6 +24,7 @@
 
 <script>
 import { ViewBox } from 'vux'
+import { listMenu } from '../data'
 
 export default {
     components: {
@@ -32,7 +33,7 @@ export default {
     data() {
         return {
             title: '商品列表',
-            list: ['Appliances','Mobil','Phones','Computer',this.$t('母婴玩具'),this.$t('男装女装'),this.$t('鞋靴箱包'),'Beauty、Accessories',this.$t('汽车用品'),this.$t('母婴玩具'),this.$t('母婴玩具'),this.$t('母婴玩具'),this.$t('母婴玩具'),this.$t('母婴玩具'),this.$t('母婴玩具')]
+            listMenu
         }
     }
 }

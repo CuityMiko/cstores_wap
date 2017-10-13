@@ -30,7 +30,7 @@ rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
 
         console.log(chalk.cyan('  Build complete.\n'))
         if (process.env.npm_config_preview) {
-            server.start({
+            server.start({ // 自动运行站点
                 port: 9090,
                 directory: './dist',
                 file: '/index.html'

@@ -1,18 +1,16 @@
 <template>
     <div class="index_search">
-      <!-- <router-link to="search"> -->
         <diV class="s_box">
           <router-link class="s_mid" to="search">
               <icon-svg icon-class="search" class="main-icons"></icon-svg>
               <input type="text" :placeholder="$t('搜索商品')">
           </router-link>
-          <div class="s_right">
+          <router-link class="s_right" to="messages">
               <a href="" class="message">
               <icon-svg icon-class="message" class="main-icons"></icon-svg>
               </a>
-          </div>
+          </router-link>
         </diV>
-      <!-- </router-link> -->
     </div>
 </template>
 

@@ -2,7 +2,7 @@
   <div id="goods2">
      <!-- Good seller -->
      <div class="item">
-        <flexbox :gutter="0" v-for="l in list" :key="l">
+        <flexbox :gutter="0" v-for="l in goods2Menu" :key="l">
             <flexbox-item>
                 <div class="flex-demo">
                     <img :src="l">
@@ -18,6 +18,7 @@
 
 <script>
 import { Flexbox,FlexboxItem } from 'vux'
+import { goods2Menu } from '../data'
 
 export default {
   components: {
@@ -27,12 +28,7 @@ export default {
   data() {
     return {
       title: '上二下四',
-        list: ['http://www.commoditiesinchina.com:80/upload/20170629/1498718387070.jpg',
-        'http://www.commoditiesinchina.com:80/upload/20170629/1498718402729.jpg',
-        'http://www.commoditiesinchina.com:80/upload/20170629/1498718414351.jpg',
-        'http://www.commoditiesinchina.com:80/upload/20170629/1498718426303.jpg',
-        'http://www.commoditiesinchina.com:80/upload/20170629/1498718437938.jpg',
-        'http://www.commoditiesinchina.com:80/upload/20170629/1498718449217.jpg']
+      goods2Menu,
     }
   },
 }

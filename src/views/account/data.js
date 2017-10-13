@@ -7,7 +7,7 @@
  * islink : 是否需要右侧箭头
  */
 export const accountMenu = [
-  { title: '我的订单', islink: true, linktitle: '查看全部订单',icon: '', linkurl: '', list: [
+  { title: '我的订单', islink: true, linktitle: '查看全部订单',icon: '', linkurl: '/member', list: [
     { name: '待付款', icon: 'card', url: '' },
     { name: '待收货', icon: 'delivery', url: '' },
     { name: '已完成', icon: 'accomplish', url: '' },
